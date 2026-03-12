@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smoobu Style Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- ── LEFT PANEL ─────────────────────────────────────────── -->
+    <aside class="panel">
+      <div class="panel-header">
+        <span class="panel-title">SMOOBU STYLE GENERATOR</span>
+      </div>
+
+      <div class="panel-body">
+
+        <!-- Context Mode -->
+        <section class="section" style="padding: 12px 20px;">
+          <div class="mode-toggle">
+            <button class="mode-btn active" data-mode="standalone">Standalone</button>
+            <button class="mode-btn" data-mode="embedded">Embedded</button>
+          </div>
+        </section>
+
+        <!-- Templates -->
+        <section class="section">
+          <div class="section-label">TEMPLATES</div>
+          <div class="template-list">
+            <button class="template-btn" data-template="minimal">Minimal</button>
+            <button class="template-btn" data-template="modern">Modern</button>
+            <button class="template-btn" data-template="warm">Warm</button>
+          </div>
+        </section>
+
+        <!-- Colors -->
+        <section class="section">
+          <div class="section-label">COLORS</div>
+
+          <div class="control-group">
+            <div class="subsection-label">BUTTONS</div>
+            <div class="control">
+              <label class="control-label">Primary</label>
+              <div class="color-input-group">
+                <input type="color" id="buttonColorPrimary" class="color-swatch">
+                <input type="text" id="buttonColorPrimaryHex" class="hex-input" maxlength="7">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label">Secondary</label>
+              <div class="color-input-group">
+                <input type="color" id="buttonColorSecondary" class="color-swatch">
+                <input type="text" id="buttonColorSecondaryHex" class="hex-input" maxlength="7">
+              </div>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="subsection-label">TEXT</div>
+            <div class="control">
+              <label class="control-label">Main text & headlines</label>
+              <div class="color-input-group">
+                <input type="color" id="fontColorBlack" class="color-swatch">
+                <input type="text" id="fontColorBlackHex" class="hex-input" maxlength="7">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label">Labels</label>
+              <div class="color-input-group">
+                <input type="color" id="fontColorLabel" class="color-swatch">
+                <input type="text" id="fontColorLabelHex" class="hex-input" maxlength="7">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label">Error</label>
+              <div class="color-input-group">
+                <input type="color" id="fontColorError" class="color-swatch">
+                <input type="text" id="fontColorErrorHex" class="hex-input" maxlength="7">
+              </div>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="subsection-label">BORDERS</div>
+            <div class="control">
+              <label class="control-label">Booking engine</label>
+              <div class="color-input-group">
+                <button class="transparent-btn" id="borderColorDefaultTransparent" title="Transparent">⊘</button>
+                <input type="color" id="borderColorDefault" class="color-swatch">
+                <input type="text" id="borderColorDefaultHex" class="hex-input" maxlength="11">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label">Property cards & check-out</label>
+              <div class="color-input-group">
+                <button class="transparent-btn" id="borderColorContainerTransparent" title="Transparent">⊘</button>
+                <input type="color" id="borderColorContainer" class="color-swatch">
+                <input type="text" id="borderColorContainerHex" class="hex-input" maxlength="11">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label">Input fields</label>
+              <div class="color-input-group">
+                <button class="transparent-btn" id="borderColorInputTransparent" title="Transparent">⊘</button>
+                <input type="color" id="borderColorInput" class="color-swatch">
+                <input type="text" id="borderColorInputHex" class="hex-input" maxlength="11">
+              </div>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="subsection-label">BACKGROUND</div>
+            <div class="control">
+              <label class="control-label">Page</label>
+              <div class="color-input-group">
+                <button class="transparent-btn" id="bodyBackgroundTransparent" title="Transparent">⊘</button>
+                <input type="color" id="bodyBackground" class="color-swatch">
+                <input type="text" id="bodyBackgroundHex" class="hex-input" maxlength="11">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label">Cards</label>
+              <div class="color-input-group">
+                <button class="transparent-btn" id="cardBackgroundTransparent" title="Transparent">⊘</button>
+                <input type="color" id="cardBackground" class="color-swatch">
+                <input type="text" id="cardBackgroundHex" class="hex-input" maxlength="11">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label">Booking engine</label>
+              <div class="color-input-group">
+                <button class="transparent-btn" id="searchBackgroundTransparent" title="Transparent">⊘</button>
+                <input type="color" id="searchBackground" class="color-swatch">
+                <input type="text" id="searchBackgroundHex" class="hex-input" maxlength="11">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Shape -->
+        <section class="section">
+          <div class="section-label">SHAPE</div>
+
+          <div class="subsection-label" style="margin-bottom: 4px;">CORNER ROUNDING</div>
+
+          <div class="control slider-control">
+            <label class="control-label">
+              Borders <span id="borderRadiusBordersValue" class="slider-value">5px</span>
+            </label>
+            <input type="range" id="borderRadiusBorders" min="0" max="24" value="5" class="slider">
+            <div class="presets">
+              <button class="preset-btn" data-target="borderRadiusBorders" data-value="0">Sharp</button>
+              <button class="preset-btn" data-target="borderRadiusBorders" data-value="4">Subtle</button>
+              <button class="preset-btn" data-target="borderRadiusBorders" data-value="8">Rounded</button>
+              <button class="preset-btn" data-target="borderRadiusBorders" data-value="24">Pill</button>
+            </div>
+          </div>
+
+          <div class="control slider-control" style="margin-top: 16px;">
+            <label class="control-label">
+              Images <span id="borderRadiusImagesValue" class="slider-value">5px</span>
+            </label>
+            <input type="range" id="borderRadiusImages" min="0" max="24" value="5" class="slider">
+            <div class="presets">
+              <button class="preset-btn" data-target="borderRadiusImages" data-value="0">Sharp</button>
+              <button class="preset-btn" data-target="borderRadiusImages" data-value="4">Subtle</button>
+              <button class="preset-btn" data-target="borderRadiusImages" data-value="8">Rounded</button>
+              <button class="preset-btn" data-target="borderRadiusImages" data-value="24">Pill</button>
+            </div>
+          </div>
+
+          <div class="control slider-control" style="margin-top: 16px;">
+            <label class="control-label">
+              Buttons <span id="borderRadiusButtonsValue" class="slider-value">5px</span>
+            </label>
+            <input type="range" id="borderRadiusButtons" min="0" max="24" value="5" class="slider">
+            <div class="presets">
+              <button class="preset-btn" data-target="borderRadiusButtons" data-value="0">Sharp</button>
+              <button class="preset-btn" data-target="borderRadiusButtons" data-value="4">Subtle</button>
+              <button class="preset-btn" data-target="borderRadiusButtons" data-value="8">Rounded</button>
+              <button class="preset-btn" data-target="borderRadiusButtons" data-value="24">Pill</button>
+            </div>
+          </div>
+
+          <div class="control slider-control" style="margin-top: 20px;">
+            <label class="control-label">
+              Border width <span id="borderWidthValue" class="slider-value">1px</span>
+            </label>
+            <input type="range" id="borderWidth" min="0" max="4" value="1" class="slider">
+          </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="section">
+          <div class="section-label">TYPOGRAPHY</div>
+          <div class="control" style="flex-direction: column; align-items: stretch; gap: 8px;">
+            <label class="control-label">Font family</label>
+            <select id="fontFamily" class="select-input">
+              <option value="">Default (Metropolis)</option>
+              <option value="Inter">Inter</option>
+              <option value="Roboto">Roboto</option>
+              <option value="Lato">Lato</option>
+              <option value="Montserrat">Montserrat</option>
+              <option value="Open Sans">Open Sans</option>
+              <option value="Raleway">Raleway</option>
+              <option value="Source Sans Pro">Source Sans Pro</option>
+              <option value="Nunito">Nunito</option>
+              <option value="DM Sans">DM Sans</option>
+              <option value="Playfair Display">Playfair Display</option>
+              <option value="Merriweather">Merriweather</option>
+              <option value="Crimson Text">Crimson Text</option>
+            </select>
+          </div>
+        </section>
+
+      </div>
+    </aside>
+
+    <!-- ── RIGHT PANEL ────────────────────────────────────────── -->
+    <main class="main">
+      <div class="preview-header">
+        <div class="preview-header-left">
+          <span class="preview-label">LIVE PREVIEW</span>
+          <span class="preview-disclaimer">Styled mockup — not the live booking engine</span>
+        </div>
+        <div class="preview-width-toggle">
+          <button class="width-btn active" data-width="desktop">Desktop</button>
+          <button class="width-btn" data-width="mobile">Mobile</button>
+        </div>
+      </div>
+
+      <div class="preview-area">
+        <div class="preview-frame-wrapper" id="previewWrapper">
+          <iframe id="preview-iframe" class="preview-iframe"></iframe>
+        </div>
+      </div>
+
+      <div class="output-area">
+        <div class="output-header">
+          <span class="output-label">GENERATED CSS</span>
+          <button id="copy-btn" class="copy-btn">Copy CSS</button>
+        </div>
+        <pre class="css-output" id="css-output"></pre>
+      </div>
+    </main>
+
+  </div>
+  <script src="app.js?v=21" type="module"></script>
+</body>
+</html>
