@@ -762,6 +762,14 @@ h2 {
 }
 .border-default {
   border-radius: var(--border-radius) !important;
+}
+.input-group .form-control.border-default {
+  border-right: none !important;
+  border-radius: var(--border-radius) 0 0 var(--border-radius) !important;
+}
+.input-group-text {
+  border-left: none !important;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0 !important;
 }`
   );
 
