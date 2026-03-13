@@ -777,13 +777,13 @@ h2 {
   if (s.fontFamily) {
     parts.push(`body {\n  font-family: '${s.fontFamily}', sans-serif;\n}`);
   }
-  if (s.bodyBackground && s.bodyBackground !== '#ffffff') {
+  if (s.bodyBackground) {
     parts.push(`body {\n  background: ${s.bodyBackground} !important;\n}`);
   }
-  if (s.cardBackground && s.cardBackground !== '#ffffff') {
+  if (s.cardBackground) {
     parts.push(`.apartmentInfoBox {\n  background: ${s.cardBackground} !important;\n}`);
   }
-  if (s.searchBackground && s.searchBackground !== '#ffffff') {
+  if (s.searchBackground) {
     parts.push(`#check-availability-container {\n  background: ${s.searchBackground} !important;\n}`);
   }
 
