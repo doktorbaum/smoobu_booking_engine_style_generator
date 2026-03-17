@@ -1026,6 +1026,8 @@ function init() {
       document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       state.contextMode = btn.dataset.mode;
+      document.getElementById('bodyBackgroundLabel').textContent =
+        btn.dataset.mode === 'embedded' ? 'Container' : 'Page';
       applyContextMode();
     });
   });
