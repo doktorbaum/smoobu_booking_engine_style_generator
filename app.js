@@ -413,9 +413,9 @@ const MOCKUP_HTML = `<!DOCTYPE html>
         </div>
       </div>
 
-      <!-- RIGHT: Contact form -->
+      <!-- RIGHT: Contact form. Real Smoobu wrapper class: one-apartment-form-left-container border-box border-default border-container — needs .border-container so Property cards & check-out picker colors this whole box (verified on booking.smoobu.com 2026-04-16). -->
       <div class="col-12 col-md-7">
-        <div class="border-box border-default" style="padding: 20px 24px;">
+        <div class="one-apartment-form-left-container border-box border-default border-container" style="padding: 20px 24px;">
           <h3 class="color-headlines" style="font-size: 15px; font-weight: 700; margin: 0 0 16px 0;">Kontakt</h3>
 
           <div class="row">
@@ -835,8 +835,13 @@ textarea::placeholder {
   border-right: none !important;
   border-radius: var(--border-radius) 0 0 var(--border-radius) !important;
 }
+/* Date section / calendar icon wrapper: real Smoobu DOM has <span class="input-group-text">
+   with NO .border-* class, so it falls back to Bootstrap's hardcoded #ced4da border. We force
+   top/right/bottom to follow the Input fields picker, and zero out the left edge so the wrapper
+   visually merges with the date input on its left. */
 .input-group-text {
-  border-left: none !important;
+  border: var(--border-width) solid var(--border-color-input) !important;
+  border-left: 0 !important;
   border-radius: 0 var(--border-radius) var(--border-radius) 0 !important;
 }`
   );
