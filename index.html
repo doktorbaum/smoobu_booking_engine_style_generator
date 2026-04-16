@@ -6,7 +6,7 @@
   <title>Smoobu Style Generator</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=21">
+  <link rel="stylesheet" href="style.css?v=24">
 </head>
 <body>
   <div class="app">
@@ -62,10 +62,17 @@
           <div class="control-group">
             <div class="subsection-label">TEXT</div>
             <div class="control">
-              <label class="control-label">Main text & headlines</label>
+              <label class="control-label">Headlines</label>
               <div class="color-input-group">
                 <input type="color" id="fontColorBlack" class="color-swatch">
                 <input type="text" id="fontColorBlackHex" class="hex-input" maxlength="7">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label">Text</label>
+              <div class="color-input-group">
+                <input type="color" id="fontColorDefault" class="color-swatch">
+                <input type="text" id="fontColorDefaultHex" class="hex-input" maxlength="7">
               </div>
             </div>
             <div class="control">
@@ -73,6 +80,13 @@
               <div class="color-input-group">
                 <input type="color" id="fontColorLabel" class="color-swatch">
                 <input type="text" id="fontColorLabelHex" class="hex-input" maxlength="7">
+              </div>
+            </div>
+            <div class="control">
+              <label class="control-label">Icons</label>
+              <div class="color-input-group">
+                <input type="color" id="fontColorIcons" class="color-swatch">
+                <input type="text" id="fontColorIconsHex" class="hex-input" maxlength="7">
               </div>
             </div>
             <div class="control">
@@ -123,7 +137,7 @@
               </div>
             </div>
             <div class="control">
-              <label class="control-label">Cards</label>
+              <label class="control-label">Cards & checkout</label>
               <div class="color-input-group">
                 <button class="transparent-btn" id="cardBackgroundTransparent" title="Transparent">⊘</button>
                 <input type="color" id="cardBackground" class="color-swatch">
@@ -255,6 +269,6 @@
     </main>
 
   </div>
-  <script src="app.js?v=21" type="module"></script>
+  <script src="app.js?v=24" type="module"></script>
 </body>
 </html>

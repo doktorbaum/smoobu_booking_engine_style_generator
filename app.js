@@ -39,8 +39,9 @@ const MOCKUP_HTML = `<!DOCTYPE html>
     .color-error        { color: var(--font-color-error); }
     .color-black        { color: var(--font-color-black); }
     /* Production-specific classes (no Smoobu variable equivalent) */
-    .grey-label         { color: var(--font-color-default); }
-    .person-label       { color: var(--font-color-black); }
+    .grey-label         { color: var(--font-color-label); }
+    .person-label       { color: var(--font-color-default); }
+    .label-default      { color: var(--font-color-label); }
 
     .border-default {
       border: var(--border-width) solid var(--border-color-default) !important;
@@ -234,7 +235,7 @@ const MOCKUP_HTML = `<!DOCTYPE html>
     <div class="navbar navbar-default">
       <div class="navbar-header">
         <a class="navbar-brand" id="navbar-brand-link" href="#">
-          <h1 class="logo_title color-default color-headlines color-black">Meine Ferienwohnungen</h1>
+          <h1 class="logo_title color-headlines">Meine Ferienwohnungen</h1>
         </a>
       </div>
     </div>
@@ -247,7 +248,7 @@ const MOCKUP_HTML = `<!DOCTYPE html>
           <div class="row">
 
             <div class="col-6 col-md-4 form-group">
-              <div class="label-default color-default color-label">Anreise</div>
+              <div class="label-default color-label">Anreise</div>
               <div class="input-group">
                 <input class="form-control border-default border-input color-default color-input"
                        type="text" placeholder="TT.MM.JJJJ" readonly>
@@ -260,7 +261,7 @@ const MOCKUP_HTML = `<!DOCTYPE html>
             </div>
 
             <div class="col-6 col-md-4 form-group">
-              <div class="label-default color-default color-label">Abreise</div>
+              <div class="label-default color-label">Abreise</div>
               <div class="input-group">
                 <input class="form-control border-default border-input color-default color-input"
                        type="text" placeholder="TT.MM.JJJJ" readonly>
@@ -273,7 +274,7 @@ const MOCKUP_HTML = `<!DOCTYPE html>
             </div>
 
             <div class="col-12 col-md-4 form-group">
-              <div class="label-default color-default color-label">Gäste</div>
+              <div class="label-default color-label">Gäste</div>
               <select class="form-control border-default border-input color-default color-input">
                 <option class="color-black">2 Gäste</option>
                 <option class="color-black">3 Gäste</option>
@@ -304,7 +305,7 @@ const MOCKUP_HTML = `<!DOCTYPE html>
                 <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=290&fit=crop&crop=center" alt="">
               </div>
               <div class="_classTextContainer_ col-8 col-md-9">
-                <h2 class="color-default color-headlines color-black">Sonnige Ferienwohnung am See</h2>
+                <h2 class="color-headlines">Sonnige Ferienwohnung am See</h2>
                 <div class="amenities-row">
                   <i class="fas fa-bed color-icons"></i>
                   <i class="fas fa-shower color-icons"></i>
@@ -336,7 +337,7 @@ const MOCKUP_HTML = `<!DOCTYPE html>
                 <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=290&fit=crop&crop=center" alt="">
               </div>
               <div class="_classTextContainer_ col-8 col-md-9">
-                <h2 class="color-default color-headlines color-black">Gemütliches Stadtapartment</h2>
+                <h2 class="color-headlines">Gemütliches Stadtapartment</h2>
                 <div class="amenities-row">
                   <i class="fas fa-bed color-icons"></i>
                   <i class="fas fa-shower color-icons"></i>
@@ -380,7 +381,7 @@ const MOCKUP_HTML = `<!DOCTYPE html>
                  alt="">
           </div>
           <div style="padding: 16px 20px;">
-            <h3 id="formAptTitle" class="color-black"
+            <h3 id="formAptTitle" class="color-headlines"
                 style="font-size: 16px; font-weight: 700; margin: 0 0 14px 0;">
               Sonnige Ferienwohnung am See
             </h3>
@@ -415,57 +416,57 @@ const MOCKUP_HTML = `<!DOCTYPE html>
       <!-- RIGHT: Contact form -->
       <div class="col-12 col-md-7">
         <div class="border-box border-default" style="padding: 20px 24px;">
-          <h3 class="color-black" style="font-size: 15px; font-weight: 700; margin: 0 0 16px 0;">Kontakt</h3>
+          <h3 class="color-headlines" style="font-size: 15px; font-weight: 700; margin: 0 0 16px 0;">Kontakt</h3>
 
           <div class="row">
             <div class="col-6 form-group">
-              <div class="label-default color-default color-label">Vorname*</div>
+              <div class="label-default color-label">Vorname*</div>
               <input type="text" class="form-control border-default border-input color-default color-input">
             </div>
             <div class="col-6 form-group">
-              <div class="label-default color-default color-label">Nachname*</div>
+              <div class="label-default color-label">Nachname*</div>
               <input type="text" class="form-control border-default border-input color-default color-input">
             </div>
           </div>
           <div class="row">
             <div class="col-6 form-group">
-              <div class="label-default color-default color-label">E-Mail*</div>
+              <div class="label-default color-label">E-Mail*</div>
               <input type="email" class="form-control border-default border-input color-default color-input">
             </div>
             <div class="col-6 form-group">
-              <div class="label-default color-default color-label">Telefon</div>
+              <div class="label-default color-label">Telefon</div>
               <input type="tel" class="form-control border-default border-input color-default color-input">
             </div>
           </div>
           <div class="row">
             <div class="col-8 form-group">
-              <div class="label-default color-default color-label">Straße / Hausnummer</div>
+              <div class="label-default color-label">Straße / Hausnummer</div>
               <input type="text" class="form-control border-default border-input color-default color-input">
             </div>
             <div class="col-4 form-group">
-              <div class="label-default color-default color-label">PLZ</div>
+              <div class="label-default color-label">PLZ</div>
               <input type="text" class="form-control border-default border-input color-default color-input">
             </div>
           </div>
           <div class="row">
             <div class="col-6 form-group">
-              <div class="label-default color-default color-label">Stadt</div>
+              <div class="label-default color-label">Stadt</div>
               <input type="text" class="form-control border-default border-input color-default color-input">
             </div>
             <div class="col-6 form-group">
-              <div class="label-default color-default color-label">Land</div>
+              <div class="label-default color-label">Land</div>
               <input type="text" class="form-control border-default border-input color-default color-input">
             </div>
           </div>
           <div class="form-group">
-            <div class="label-default color-default color-label">Nachricht an den Gastgeber</div>
+            <div class="label-default color-label">Nachricht an den Gastgeber</div>
             <textarea class="form-control border-default border-input color-default color-input" rows="2"></textarea>
           </div>
 
-          <!-- Optional Extras -->
-          <div class="grey-label" style="margin-bottom: 10px;">Optionale Extras</div>
+          <!-- Optional Extras — real Smoobu wraps addon labels in <label class="label-default color-label color-black"> so they pick up the Labels color -->
+          <label class="grey-label" style="margin-bottom: 10px; display: block;">Optionale Leistungen</label>
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; font-size: 13px;">
-            <span class="color-default">Endreinigung &nbsp;<strong class="color-black">60 €</strong> / Buchung</span>
+            <label class="label-default color-label color-black" style="margin: 0; font-weight: normal;">Endreinigung &nbsp;60 € / Buchung</label>
             <div style="display: flex; align-items: center; gap: 6px;">
               <button class="btn btn-secondary" style="width: 26px; height: 26px; padding: 0; line-height: 1;">−</button>
               <span class="color-black" style="min-width: 16px; text-align: center; font-size: 13px;">0</span>
@@ -473,7 +474,7 @@ const MOCKUP_HTML = `<!DOCTYPE html>
             </div>
           </div>
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; font-size: 13px;">
-            <span class="color-default">Haustier &nbsp;<strong class="color-black">15 €</strong> / Buchung</span>
+            <label class="label-default color-label color-black" style="margin: 0; font-weight: normal;">Haustier &nbsp;15 € / Buchung</label>
             <div style="display: flex; align-items: center; gap: 6px;">
               <button class="btn btn-secondary" style="width: 26px; height: 26px; padding: 0; line-height: 1;">−</button>
               <span class="color-black" style="min-width: 16px; text-align: center; font-size: 13px;">0</span>
@@ -483,7 +484,7 @@ const MOCKUP_HTML = `<!DOCTYPE html>
 
           <!-- Payment method -->
           <div class="form-group">
-            <div class="label-default color-default color-label">Zahlungsmethode</div>
+            <div class="label-default color-label">Zahlungsmethode</div>
             <select class="form-control border-default border-input color-default color-input">
               <option class="color-black">Zahlung bei Anreise</option>
               <option class="color-black">Kreditkarte</option>
@@ -491,15 +492,15 @@ const MOCKUP_HTML = `<!DOCTYPE html>
             </select>
           </div>
 
-          <!-- T&C -->
-          <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 16px; font-size: 12px;">
+          <!-- T&C — real Smoobu wraps this in <label class="label-default color-label color-black"> inside .form-group -->
+          <div class="form-group" style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 16px; font-size: 12px;">
             <input type="checkbox" style="margin-top: 3px; flex-shrink: 0; cursor: pointer;">
-            <span class="color-label">Ich stimme den
-              <a href="#" class="color-label" style="text-decoration: underline;">AGB</a>
+            <label class="label-default color-label color-black" style="margin: 0; font-weight: normal; display: inline;">Ich stimme den
+              <a href="#" style="text-decoration: underline; color: inherit;">AGB</a>
               und der
-              <a href="#" class="color-label" style="text-decoration: underline;">Datenschutzerklärung</a>
+              <a href="#" style="text-decoration: underline; color: inherit;">Datenschutzerklärung</a>
               zu.
-            </span>
+            </label>
           </div>
 
           <!-- Price summary + submit -->
@@ -656,6 +657,7 @@ const CSS_VAR_MAP = {
   buttonColorPrimary:   '--button-color-primary',
   buttonColorSecondary: '--button-color-secondary',
   fontColorBlack:       '--font-color-black',
+  fontColorDefault:     '--font-color-default',
   fontColorLabel:       '--font-color-label',
   fontColorIcons:       '--font-color-icons',
   fontColorError:       '--font-color-error',
@@ -687,6 +689,15 @@ function generateCSS(s) {
   if (normalizeHex(s.fontColorBlack) !== normalizeHex(SMOOBU_DEFAULTS.fontColorBlack)) {
     rootVars.push(`  --font-color-headlines: ${s.fontColorBlack};`);
   }
+  // --font-color-input mirrors fontColorDefault (Smoobu input text has no dedicated UI control;
+  // it renders the same as secondary body text in practice, so we reuse the "Secondary text" color).
+  if (normalizeHex(s.fontColorDefault) !== normalizeHex(SMOOBU_DEFAULTS.fontColorDefault)) {
+    rootVars.push(`  --font-color-input: ${s.fontColorDefault};`);
+  }
+  // --font-color-input-icons mirrors fontColorIcons (calendar + select-dropdown indicators next to inputs)
+  if (normalizeHex(s.fontColorIcons) !== normalizeHex(SMOOBU_DEFAULTS.fontColorIcons)) {
+    rootVars.push(`  --font-color-input-icons: ${s.fontColorIcons};`);
+  }
   if (s.borderRadiusBorders !== SMOOBU_DEFAULTS.borderRadiusBorders) {
     rootVars.push(`  --border-radius: ${s.borderRadiusBorders}px;`);
   }
@@ -697,37 +708,94 @@ function generateCSS(s) {
     parts.push(`:root {\n${rootVars.join('\n')}\n}`);
   }
 
-  // Direct class overrides — all non-label text follows fontColorBlack ("Main text & headlines").
-  // Smoobu's own CSS hardcodes these colors rather than using variables,
+  // Direct class overrides — Smoobu hardcodes colors on many elements rather than using variables,
   // so !important rules are needed to override them in production.
-  // .color-label elements are excluded — they follow the "Labels" picker via --font-color-label variable.
+  //
+  // Five disjoint text categories (UI labels → state keys → selectors):
+  //   Headlines → fontColorBlack   → visual h1/h2/h3 + .color-headlines carriers
+  //   Text      → fontColorDefault → everything that isn't a headline, label, or icon
+  //                                  (prices, metadata, side labels, addon rows, back links,
+  //                                  T&C, typed input text, AND input placeholders)
+  //   Labels    → fontColorLabel   → form field labels + .grey-label section captions (Optional Extras)
+  //   Icons     → fontColorIcons   → Font Awesome / SVG icons in the engine
+  //   Error     → fontColorError   → validation errors (driven via --font-color-error only)
+
+  // HEADLINES — narrowed to true visual headlines (h1/h2/h3 and .color-headlines carriers).
+  // h2/h3 fallback catches bare <h2>/<h3> on the checkout page (e.g. "Haus am See", "Kontaktdaten")
+  // which Smoobu ships without .color-headlines.
   if (normalizeHex(s.fontColorBlack) !== normalizeHex(SMOOBU_DEFAULTS.fontColorBlack)) {
     parts.push(
-`.color-black {
+`.color-headlines,
+h1.color-headlines, h2.color-headlines, h3.color-headlines,
+h1.logo_title,
+.apartmentInfoBox h3,
+h2:not(.color-default):not(.color-label),
+h3:not(.color-default):not(.color-label) {
   color: ${s.fontColorBlack} !important;
-}
-.color-default:not(.color-label) {
-  color: ${s.fontColorBlack} !important;
-}
-.color-headlines {
-  color: ${s.fontColorBlack} !important;
-}
-h2 {
-  color: ${s.fontColorBlack} !important;
-}
-.grey-label {
-  color: ${s.fontColorBlack} !important;
-}
-.person-label {
-  color: ${s.fontColorBlack} !important;
-}
-.arrival-date-label, .departure-date-label {
-  color: ${s.fontColorBlack} !important;
-}
+}`
+    );
+  }
+
+  // TEXT — prices, metadata, external links, back links, typed input text, placeholders.
+  // Audit 2026-04-16 revealed two bleed bugs that are fixed here:
+  //   1. Error bleed — .color-default elements can also carry .color-error (e.g. validation icons/spans);
+  //      adding :not(.color-error) stops Text from overriding Error.
+  //   2. Addon/T&C bleed — addon selection labels and the T&C checkbox label both carry
+  //      .label-default.color-label.color-black in real Smoobu DOM. They belong in Labels (they are
+  //      literal <label> elements structurally). Adding :not(.label-default) to the .color-black
+  //      chain keeps them in Labels while still pulling in the external link on search results
+  //      (a.color-default.color-black, which carries no .label-default).
+  if (normalizeHex(s.fontColorDefault) !== normalizeHex(SMOOBU_DEFAULTS.fontColorDefault)) {
+    parts.push(
+`.color-default:not(.color-label):not(.color-headlines):not(.color-icons):not(.color-input-icons):not(.color-error),
+.color-black:not(.color-headlines):not(.color-error):not(.label-default),
+.person-label,
+.arrival-date-label, .departure-date-label,
 .basePrice-row, .cleaningFee-row, .prepayment-row, .price-row,
 .additionalGuestFee-row, .addon-row, .commission-row,
-.longStayDiscount-row, .coupon-row {
-  color: ${s.fontColorBlack} !important;
+.longStayDiscount-row, .coupon-row,
+.back-link {
+  color: ${s.fontColorDefault} !important;
+}
+.form-control::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: ${s.fontColorDefault} !important;
+  opacity: 1 !important;
+}`
+    );
+  }
+
+  // LABELS — form field labels + .grey-label section captions (e.g. "Optional Extras").
+  // Restricted via parent selectors so it doesn't leak onto T&C checkbox text or anything else
+  // that happens to carry .color-label in the real DOM.
+  if (normalizeHex(s.fontColorLabel) !== normalizeHex(SMOOBU_DEFAULTS.fontColorLabel)) {
+    parts.push(
+`.label-default,
+.label-default.color-label,
+.form-group > .color-label,
+.form-group > label,
+.form-group > .label-default,
+.grey-label:not(.color-headlines) {
+  color: ${s.fontColorLabel} !important;
+}`
+    );
+  }
+
+  // ICONS — Font Awesome / inline icons. Smoobu hardcodes icon colors on some elements so an
+  // !important override is required. Scope covers both the property/checkout card and the inline
+  // icons next to inputs.
+  if (normalizeHex(s.fontColorIcons) !== normalizeHex(SMOOBU_DEFAULTS.fontColorIcons)) {
+    parts.push(
+`.color-icons,
+.color-input-icons,
+.apartmentInfoBox i,
+.apartmentInfoBox .fa,
+.apartmentInfoBox .fas,
+.apartmentInfoBox .far,
+.form-control + i,
+.input-group i {
+  color: ${s.fontColorIcons} !important;
 }`
     );
   }
@@ -781,7 +849,20 @@ h2 {
     parts.push(`body {\n  background: ${s.bodyBackground} !important;\n}`);
   }
   if (s.cardBackground) {
-    parts.push(`.apartmentInfoBox {\n  background: ${s.cardBackground} !important;\n}`);
+    // Unified "Cards & checkout" color — applies to every card-like surface in the booking engine:
+    //   • property cards in search results (.apartmentInfoBox)
+    //   • left price-breakdown box on checkout (.apartmentInfoBox)
+    //   • right contact-form wrapper on checkout ([class*="col-md-"] > .border-box)
+    // The structural selector catches the right form wrapper on real Smoobu DOM without needing
+    // a dedicated class name. Verified live on booking.smoobu.com 2026-04-15.
+    parts.push(
+`.apartmentInfoBox,
+.apartmentInfoBox > div,
+[class*="col-md-"] > .border-box,
+[class*="col-lg-"] > .border-box {
+  background: ${s.cardBackground} !important;
+}`
+    );
   }
   if (s.searchBackground) {
     parts.push(`#check-availability-container {\n  background: ${s.searchBackground} !important;\n}`);
