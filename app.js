@@ -381,17 +381,21 @@ const MOCKUP_HTML = `<!DOCTYPE html>
                  alt="">
           </div>
           <div style="padding: 16px 20px;">
-            <h3 id="formAptTitle" class="color-headlines"
+            <h2 id="formAptTitle" class="color-headlines"
                 style="font-size: 16px; font-weight: 700; margin: 0 0 14px 0;">
               Sonnige Ferienwohnung am See
-            </h3>
-            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font-size: 13px;">
+            </h2>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; font-size: 13px;">
               <i class="fas fa-user color-icons"></i>
               <span class="person-label">2 Personen</span>
             </div>
-            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px; font-size: 13px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; font-size: 13px;">
               <i class="fas fa-calendar-alt color-icons"></i>
-              <span class="person-label">12.05.26 &rarr; 17.05.26</span>
+              <span style="display: inline-flex; align-items: center; gap: 12px;">
+                <span class="arrival-date-label">12.05.26</span>
+                <i class="fas fa-arrow-right color-icons" style="font-size: 11px;"></i>
+                <span class="departure-date-label">17.05.26</span>
+              </span>
             </div>
             <hr style="border: none; border-top: 1px solid var(--border-color-default); margin: 0 0 12px 0;">
             <div style="font-size: 13px;">
