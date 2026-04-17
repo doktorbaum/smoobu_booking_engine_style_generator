@@ -2,7 +2,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 13px;
   color: #1a1a1a;
   background: #f5f5f5;
@@ -55,6 +55,7 @@ body {
   background: #1a1a1a;
   color: #fff;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
   transition: background 0.15s;
   flex-shrink: 0;
@@ -130,6 +131,7 @@ body {
   height: 22px;
   padding: 0;
   border: 1px solid #e0e0e0;
+  border-radius: 4px;
   cursor: pointer;
   background: none;
   flex-shrink: 0;
@@ -147,7 +149,7 @@ body {
   color: #1a1a1a;
   background: #fff;
   outline: none;
-  border-radius: 0;
+  border-radius: 4px;
   transition: border-color 0.1s;
 }
 
@@ -179,7 +181,7 @@ body {
   height: 2px;
   background: #e0e0e0;
   outline: none;
-  border-radius: 0;
+  border-radius: 2px;
   margin-bottom: 12px;
   cursor: pointer;
 }
@@ -190,7 +192,7 @@ body {
   height: 12px;
   background: #1a1a1a;
   cursor: pointer;
-  border-radius: 0;
+  border-radius: 50%;
 }
 
 .slider::-moz-range-thumb {
@@ -199,7 +201,7 @@ body {
   background: #1a1a1a;
   cursor: pointer;
   border: none;
-  border-radius: 0;
+  border-radius: 50%;
 }
 
 .presets {
@@ -216,7 +218,7 @@ body {
   color: #888;
   cursor: pointer;
   transition: all 0.1s;
-  border-radius: 0;
+  border-radius: 4px;
 }
 
 .preset-btn:hover { border-color: #1a1a1a; color: #1a1a1a; }
@@ -235,7 +237,7 @@ body {
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
-  border-radius: 0;
+  border-radius: 4px;
   transition: border-color 0.1s;
 }
 
@@ -259,7 +261,7 @@ body {
   cursor: pointer;
   text-align: left;
   transition: all 0.1s;
-  border-radius: 0;
+  border-radius: 4px;
 }
 
 .template-btn:hover { border-color: #888; color: #1a1a1a; }
@@ -287,6 +289,7 @@ body {
   position: absolute;
   inset: 0;
   background: #e0e0e0;
+  border-radius: 999px;
   transition: background 0.2s;
 }
 
@@ -298,6 +301,7 @@ body {
   top: 3px;
   left: 3px;
   background: #fff;
+  border-radius: 50%;
   transition: transform 0.2s;
 }
 
@@ -347,6 +351,8 @@ body {
 .preview-width-toggle {
   display: flex;
   border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .width-btn {
@@ -378,6 +384,7 @@ body {
   flex: 1;
   background: #fff;
   border: 1px solid #e0e0e0;
+  border-radius: 8px;
   overflow: hidden;
   transition: max-width 0.3s ease;
   display: flex;
@@ -445,6 +452,8 @@ body {
 .mode-toggle {
   display: flex;
   border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
   width: 100%;
 }
 
@@ -482,7 +491,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0;
+  border-radius: 4px;
   transition: all 0.1s;
 }
 
